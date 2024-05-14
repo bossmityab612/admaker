@@ -1090,7 +1090,7 @@ body {
 
 .conversion__digits-text {
     font-size: 20px;
-    font-family: var(--inter);
+    font-family: var(--montserrat);
 }
 
 .conversion__input {
