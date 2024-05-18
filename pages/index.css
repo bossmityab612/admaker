@@ -109,13 +109,29 @@ body {
 .button-call {
     max-width: 252px;
     width: 100%;
-    min-height: 34px;
+    min-height: 49px;
     border: none;
     background-color: #FF3535;
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-call:hover, .button-call::before {
+    max-width: 292px;
+    width: 100%;
+    background-image: url('../images/arrow-right-white.svg');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    text-align: left;
+    transition: .3s all ease-out;
+    display: flex;
+    padding: 0 16px;
+    margin: 0;
+    justify-content: space-between;
 }
 
 .header__button:hover {
@@ -187,6 +203,10 @@ body {
     width: 100%;
 }
 
+.intro .button-call {
+    margin-top: 30px;
+}
+
 .intro__block-projects {
     min-height: 681px;
     width: 80%;
@@ -244,7 +264,17 @@ body {
     padding: 0 0 0 132px;
     height: 34px;
     justify-content: space-between;
+    cursor: pointer;
 }
+
+.client__button:hover {
+    background-color: #000;
+    color: #fff;
+}
+/* 
+.client__button:hover, .growth {
+    border: 1px solid #fff;
+} */
 
 .client__block-buttons {
     display: flex;
@@ -263,6 +293,7 @@ body {
     font-size: 12px;
     padding: 0;
     color: #4A4A4A;
+    cursor: pointer;
 }
 
 .client__button-add {
@@ -273,7 +304,12 @@ body {
     background-color: transparent;
     width: 34px;
     height: 34px;
+    cursor: pointer;
 }
+/* 
+.client__button-add:hover {
+    background-image: url('../images/client-button-add-red.svg');
+} */
 
 .intro__success-block-digits_text {
     font-size: 20px;
@@ -585,10 +621,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 0 24px;
+    text-align: left;
+    cursor: pointer;
 }
 
-.offers__form-button-text {
-    text-align: left;
+.offers__form-button-block::after {
+    background-image: url('./images/offer-button-image.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #000;
+}
+
+.offers__form-button-block:hover {
+    background-color: #FF3535;
+    color: #fff;
 }
 
 /* ----- Блок с решениями и тарифами ----- */
@@ -647,8 +695,16 @@ body {
 
 .growth__list-item-button {
     border-radius: 19px;
-    height: 31px;
+    min-height: 31px;
+    padding: 6px 11px;
     margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.growth__list-item-button:hover {
+    background-color: #FF0000;
+    color: #fff;
+    transition: .3s all ease-out;
 }
 
 .growth__cards-block {
@@ -669,6 +725,7 @@ body {
 .growth__card-image {
     border-radius: 25px 25px 0 0;
     border: 1px solid #fff;
+    background-color: #000;
 }
 
 .growth__block-title-subtitle {
@@ -692,6 +749,7 @@ body {
     border-radius: 13px;
     color: #fff;
     width: 100%;
+    cursor: pointer;
 }
 
 /* ---------- Блок Тарифы ------- */
@@ -833,6 +891,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .results__button-text {
@@ -905,6 +964,7 @@ body {
     height: 78px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .results__cases-block {
@@ -967,6 +1027,13 @@ body {
     height: 49px;
     border-radius: 22px;
     align-self: flex-end;
+    cursor: pointer;
+}
+
+.results__button-show:hover {
+    outline: 5px solid #FFA2A2;
+    /* border: 1px solid #000; */
+    transition: .3s all ease-out;
 }
 
 /* ---- Блок про улучшение конверсии ---- */
@@ -1011,6 +1078,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .conversion__button-check {
@@ -1024,6 +1092,7 @@ body {
     padding: 0;
     background-color: #6D6D6D;
     color: #fff;
+    cursor: pointer;
 }
 
 .conversion__button-check1 {
@@ -1108,6 +1177,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 9px 0;
+    cursor: pointer;
 }
 
 .conversion__text-button-block {
@@ -1242,6 +1312,7 @@ body {
     border: none;
     background-repeat: no-repeat;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .reviews__button-prev {
@@ -1283,6 +1354,7 @@ body {
     width: 100%;
     color: #fff;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .reviews__button-google {
@@ -1329,6 +1401,7 @@ body {
     height: 81px;
     top: 54px;
     left: 210px;
+    cursor: pointer;
 }
 
 .reviews__block-background-block {
@@ -1487,8 +1560,8 @@ body {
     border-radius: 28px;
     border: 1px solid #6C6C6C;
     color: #6C6C6C;;
-    text-align-last: left;
-    padding: 0 22px;
+    text-align: left;
+    padding: 16px 22px;
     margin-bottom: 10px;
 }
 
@@ -1539,6 +1612,7 @@ body {
     width: 100%;
     font-size: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .feed-back__connection-button:last-child {
@@ -1569,6 +1643,7 @@ body {
     object-fit: contain;
     margin-bottom: 14px;
     width: 100%;
+    cursor: pointer;
 }
 
 .footer__copyright {
@@ -1588,6 +1663,7 @@ body {
     text-transform: uppercase;
     font-size: 15px;
     margin-top: 22px;
+    cursor: pointer;
 }
 
 .footer__list {
