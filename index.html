@@ -165,8 +165,8 @@
                      <img src="./images/advantages-image-6.svg" alt="Картинка" class="advantages__image">
                   </div>                     
                </div>
+               <button class="button-call advantages__button">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
-            <button class="button-call advantages__button">ЗАКАЗАТЬ ЗВОНОК</button>
             <img src="./images/advantages-background-image-right.png" alt="Картинка" class="advantages__image-right">
          </div>
       </section>
@@ -418,14 +418,22 @@
             <img src="./images/conversion-background-image.png" alt="Картинка" class="conversions__background-image">
             <div class="conversion__block-bonuses">
                <h2 class="section__title conversion__title">Узнайте и примените 3 простых способа улучшить конверсию вашего сайта</h2>
-               <p class="conversion__survey-text">Пройдите опрос и получите подарок</p>
-               <button class="conversion__survey-button-block">
-                  <p class="conversion__survey-button-text">НАЧАТЬ</p>
-                  <img src="./images/results-button-right-white.svg" alt="" class="conversion__survey-button-image">
-               </button>
-               <p class="conversion__bonuses-text">Бонусы после прохожденя опроса</p>
-               <button class="conversion__button-check conversion__button-check1">ЧЕК-ЛИСТ ДЛЯ ПРОВЕРКИ ВАШЕГО САЙТА</button>
-               <button class="conversion__button-check conversion__button-check2">ЧЕК-ЛИСТ №2</button>
+               <div class="conversion__survey-main-block">
+                  <div class="conversion__survey-block-button-start">
+                     <p class="conversion__survey-text">Пройдите опрос и получите подарок</p>
+                     <button class="conversion__survey-button-block">
+                        <p class="conversion__survey-button-text">НАЧАТЬ</p>
+                        <img src="./images/results-button-right-white.svg" alt="" class="conversion__survey-button-image">
+                     </button>
+                  </div>
+                  <div class="conversion__survey-block-button-bonuses">
+                     <p class="conversion__bonuses-text">Бонусы после прохожденя опроса</p>
+                     <div class="conversion__button-check-block">
+                        <button class="conversion__button-check conversion__button-check1">ЧЕК-ЛИСТ ДЛЯ ПРОВЕРКИ ВАШЕГО САЙТА</button>
+                        <button class="conversion__button-check conversion__button-check2">ЧЕК-ЛИСТ №2</button>
+                     </div>
+                  </div>
+               </div>
             </div>
 
             <div class="conversion__form-block">
@@ -562,8 +570,6 @@
                            </div>
                            <p class="reviews__name reviews__block-icon-name-right">Имя</p>
                         </div>
-                        <!-- <div class="reviews__profile reviews__profile-right">
-                        </div> -->
                         <img src="./images/reviews-play-button.svg" alt="" class="reviews__play-image">
                      </div>
                   </div>
@@ -621,8 +627,14 @@
                </div>
                <div class="feed-back__connection">
                   <p class="feed-back__connection-text">Выберите способ связи:</p>
-                  <button class="feed-back__connection-button">Написать в TELEGRAM</button>
-                  <button class="feed-back__connection-button">Написать в WHATSAPP</button>
+                  <button class="feed-back__connection-button">
+                     <p class="feed-back__connection-button-text">Написать в TELEGRAM</p>
+                     <img src="./images/image-icon-telegram.svg" alt="" class="feed-back__connection-button-image">
+                  </button>
+                  <button class="feed-back__connection-button">
+                     <p class="feed-back__connection-button-text">Написать в WHATSAPP</p>
+                     <img src="./images/image-icon-phone.svg" alt="" class="feed-back__connection-button-image">
+                  </button>
                </div>
             </div>
          </div>
@@ -638,31 +650,42 @@
                <p class="footer__copyright">@ 2013 - 2024, ТОО “ADMAKER”</p>
                <button class="footer__button">задать вопрос онлайн</button>
             </div>
-            <ul class="footer__menu-list footer__list">
-               <li class="footer__menu-list-item footer__list-item">Меню</li>
-               <li class="footer__menu-list-item footer__list-item">Наши услуги</li>
-               <li class="footer__menu-list-item footer__list-item">Об агенстве</li>
-               <li class="footer__menu-list-item footer__list-item">Команда</li>
-               <li class="footer__menu-list-item footer__list-item">Кейсы</li>
-               <li class="footer__menu-list-item footer__list-item">Блог</li>
-            </ul>
-            <ul class="footer__services-list footer__list">
-               <li class="footer__services-list-item footer__list-item">Услуги</li>
-               <li class="footer__services-list-item footer__list-item">Perfomance</li>
-               <li class="footer__services-list-item footer__list-item">Поисковое продвижение</li>
-               <li class="footer__services-list-item footer__list-item">Аналитика</li>
-               <li class="footer__services-list-item footer__list-item">Управление имиджем</li>
-               <li class="footer__services-list-item footer__list-item">Создание и доработка сайтов</li>
-               <li class="footer__services-list-item footer__list-item">SEO продвижение</li>
-            </ul>
-            <ul class="footer__contacts-list footer__list">
-               <li class="footer__contacts-list-item footer__list-item">Контакты</li>
-               <li class="footer__contacts-list-item footer__list-item">Номер телефона +7 (702) 659-55-66</li>
-               <li class="footer__contacts-list-item footer__list-item">Почта hello@admaker.kz</li>
-               <li class="footer__contacts-list-item footer__list-item">Адрес г. Алматы ул. Толе би, 286/7</li>
-               <li class="footer__contacts-list-item footer__list-item">Понедельник - пятница 10:00 - 19:00 </li>
-               <li class="footer__contacts-list-item footer__list-item">Меню</li>
-            </ul>
+            <div class="footer__list-main-block">
+               <ul class="footer__menu-list footer__list">
+                  <li class="footer__menu-list-item footer__list-item">Меню</li>
+                  <li class="footer__menu-list-item footer__list-item">Наши услуги</li>
+                  <li class="footer__menu-list-item footer__list-item">Об агенстве</li>
+                  <li class="footer__menu-list-item footer__list-item">Команда</li>
+                  <li class="footer__menu-list-item footer__list-item">Кейсы</li>
+                  <li class="footer__menu-list-item footer__list-item">Блог</li>
+               </ul>
+               <ul class="footer__services-list footer__list">
+                  <li class="footer__services-list-item footer__list-item">Услуги</li>
+                  <li class="footer__services-list-item footer__list-item">Perfomance</li>
+                  <li class="footer__services-list-item footer__list-item">Поисковое продвижение</li>
+                  <li class="footer__services-list-item footer__list-item">Аналитика</li>
+                  <li class="footer__services-list-item footer__list-item">Управление имиджем</li>
+                  <li class="footer__services-list-item footer__list-item">Создание и доработка сайтов</li>
+                  <li class="footer__services-list-item footer__list-item">SEO продвижение</li>
+               </ul>
+               <ul class="footer__contacts-list footer__list">
+                  <li class="footer__contacts-list-item footer__list-item">Контакты</li>
+                  <li class="footer__contacts-list-item footer__list-item">Номер телефона +7 (702) 659-55-66</li>
+                  <li class="footer__contacts-list-item footer__list-item">Почта hello@admaker.kz</li>
+                  <li class="footer__contacts-list-item footer__list-item">Адрес г. Алматы ул. Толе би, 286/7</li>
+                  <li class="footer__contacts-list-item footer__list-item">Понедельник - пятница 10:00 - 19:00 </li>
+                  <li class="footer__contacts-list-item footer__list-item">
+                     <div class="footer__contacts-list-item-socials">
+                        <button type="button" class="footer__contacts-list-item-socials-button"></button>
+                        <p>WhatsApp</p>
+                     </div>
+                     <div class="footer__contacts-list-item-socials">
+                        <button type="button"></button>
+                        <p>Telegram</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
          </div>
       </div>
    </footer>
