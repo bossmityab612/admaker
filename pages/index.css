@@ -1762,7 +1762,9 @@ body {
 }
 
 .feed-back__connection-block-button {
-    display: flex;
+    display: flex;    
+    flex-direction: column;
+
 }
 
 .feed-back__connection-button {
@@ -2148,7 +2150,7 @@ body {
     .footer__list-main-block {
         margin-left: 44px;
     }
-    
+
     .footer__list-item:first-child {
         font-size: 16px;
     }
