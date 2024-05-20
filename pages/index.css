@@ -173,7 +173,7 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 49px 0 0;
-    padding: 0;
+    padding: 82px 0 98px;
     text-transform: uppercase;
     border-right: 1px solid #C9C9C9;
 }
@@ -182,7 +182,6 @@ body {
     font-size: 56px;
     line-height: 69.33px;
     margin: 0;
-    padding: 82px 0 0 0;
     font-family: var(--bicubik);
 }
 
@@ -205,6 +204,7 @@ body {
     margin: 47px 0 0 0;
     display: flex;
     flex-direction: column;
+    border-radius: 27px;
 }
 
 .intro__success-block-digits-text {
@@ -288,7 +288,7 @@ body {
 
 .intro__block-years {
     height: 100%;
-    max-width: 501px;
+    max-width: 448px;
     width: 100%;
 }
 
@@ -321,6 +321,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 51px;
+    gap: 16px;
 }
 
 .intro__block-years-development-text {
@@ -335,6 +336,8 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
+    align-items: center;
+    max-height: 56px;
 }
 
 .intro__block-years-list-line {
@@ -346,11 +349,6 @@ body {
     font-weight: 500;
 }
 
-.intro__block-years-list-item-line {
-    height: 27px;
-    width: 1px;
-    border: 1px solid #000;
-}
 
 .intro__block-years-list-text {
     padding: 0;
@@ -360,11 +358,23 @@ body {
     list-style: none;
 }
 
-.intro__block-years-list-item-image {
-    font-size: 14px;
-    margin-bottom: 20px;
+.intro__block-years-list-item {
+    font-size: 16px;
+    font-weight: 500;
 }
 
+.intro__block-years-list-item-line {
+    height: 27px;
+    width: 2px;
+    border: 1px solid #000;
+    border-radius: 13px;
+    margin: 0 17px 0 24px;
+
+}
+
+.intro__block-years-list-item-image {
+    margin: 0;
+}
 
 /* -------- Слайдер с Логотипами компаний ------- */
 
@@ -434,11 +444,14 @@ body {
 .advantages__list-block {
     padding: 0;
     margin: 55px auto 0;
-    max-height: 544px;
+    min-height: 544px;
     max-width: 895px;
     width: 100%;
     position: relative;
     display: flex;
+    gap: 55px;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -483,9 +496,6 @@ body {
 
 .advantages__button {
     height: 49px;
-    position: absolute;
-    bottom: -100px;
-    right: 0;
 }
 
 /* ------ Блок "Предложения" ----- */
@@ -1940,11 +1950,22 @@ body {
     }
 
     .intro__title {
-        padding-top: 50px;
+        padding-top: 0;
         font-size: 40px;
         line-height: 49.52px;
     }
 
+    .intro__success-block {
+        max-width: 313px;
+        width: 100%;
+        padding-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .intro__success-block-digits-text {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
     .intro__title-text {
         font-size: 24px;
         line-height: 29.71px;
@@ -1952,11 +1973,44 @@ body {
 
     .intro__block-projects {
         border: none;
+        margin: 0;
+    }
+
+    .intro__success-text {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .intro__success-digits {
+        font-size: 60px;
+        align-self: flex-end;
+    }
+    .client__button-block {
+        display: flex;
+        align-items: flex-end;
+        margin: 0 0 0 132px;
+        padding: 0;
+        height: 34px;
+        justify-content: space-between;
+        cursor: pointer;
+        flex-direction: column-reverse;
+    }
+
+    .client__button {
+        max-width: 114px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .client__button-add {
+        width: 24px;
+        height: 24px;
     }
 
     .intro__block-years {
         max-width: 324px;
     }
+
 
     .intro__block-years-development {
         max-width: 284px;
@@ -1981,8 +2035,22 @@ body {
 
 
     /* --------- Блок преимущества ------- */
+    .advantages {
+        position: relative;
+    }
+/* 
     .advantages__button {
         right: auto;
+    } */
+
+    .advantages__description {
+        max-width: 327px;
+        min-height: 148px;
+    }
+
+    .advantages__list-block {
+        align-items: center;
+        gap: 33px;
     }
 
     /* ----- Блок Решения для роста ------ */
@@ -2077,5 +2145,31 @@ body {
     
     /* ---------- Подвал -------- */
 
-  
+    .footer__list-main-block {
+        margin-left: 44px;
+    }
+    
+    .footer__list-item:first-child {
+        font-size: 16px;
+    }
+
+    .footer__list-item {
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 784px) {
+    .advantages {
+        min-height: 1381px;
+    }
+
+    .advantages__list {
+        min-height: 1064px;
+    }
+
+    .advantages__list-block {
+        max-width: 327px;
+    }
+
 }
