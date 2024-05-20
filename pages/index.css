@@ -151,46 +151,6 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
-    .burger {
-        display: flex;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-    }
-    
-    .burger__block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3px;
-    }
-    
-    .burger__lines {
-        background-color: #000;
-        display: block;
-        width: 29px;
-        height: 5px;
-        border-radius: 21px;
-    }
-    
-    .burger__lines_last {
-        width: 20px;
-    }
-
-    .burger.active {
-        background-color: #00A1DC;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    .burger__lines.active {
-        background-color: #fff;
-    }
-
-}
-
 /* Блок-слайдер с заглавием */
 .swiper {
     width: 100%;
@@ -224,6 +184,11 @@ body {
     margin: 0;
     padding: 82px 0 0 0;
     font-family: var(--bicubik);
+}
+
+
+.intro__title-digit {
+    color: #FF0000;
 }
 
 .intro__title-text {
@@ -323,6 +288,8 @@ body {
 
 .intro__block-years {
     height: 100%;
+    max-width: 501px;
+    width: 100%;
 }
 
 .intro__block-years-development {
@@ -332,8 +299,13 @@ body {
     text-transform: uppercase;
     background-image: url('../images/intro-block-image-years.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 38px;
     color: #fff;
     font-family: var(--bicubik);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .intro__block-years-development-digits {
@@ -347,6 +319,7 @@ body {
 
 .intro__block-years-list-block {
     display: flex;
+    flex-direction: column;
     margin-top: 51px;
 }
 
@@ -361,6 +334,7 @@ body {
 .intro__block-years-list {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
 .intro__block-years-list-line {
@@ -373,7 +347,9 @@ body {
 }
 
 .intro__block-years-list-item-line {
-    font-size: 27px;
+    height: 27px;
+    width: 1px;
+    border: 1px solid #000;
 }
 
 .intro__block-years-list-text {
@@ -384,7 +360,7 @@ body {
     list-style: none;
 }
 
-.intro__block-years-list-item {
+.intro__block-years-list-item-image {
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -398,6 +374,7 @@ body {
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    justify-content: center;
     align-items: center;
 }
 
@@ -414,6 +391,8 @@ body {
     margin: 0;
     font-weight: 400;
     padding: 0;
+    max-width: 834px;
+    width: 100%;
 }
 
 /* -------- Блок "Преимущества" -------  */
@@ -728,15 +707,48 @@ body {
     z-index: -1;
 }
 
-.growth__button-prev {
-    position: absolute;
-    background-image: url('../images/growth-button-prev.svg');
 
+/* ----- Кнопки переключения слайдера (свайпера) ----- */
+.client__button_left{
+    background-image: url('../images/growth-button-prev.svg');
+    width: 78px;
+    height: 78px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -250px;
+    left: 15px;
 }
 
-.growth__button-next {
-    position: absolute;
+.client__button_left::after {
+    content: none;
+}
+
+.client__button_right {
+    content: '';
     background-image: url('../images/growth-button-next.svg');
+    width: 78px;
+    height: 78px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -250px;
+    right: 15px;
+    z-index: 2;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: none;
+}
+
+.swiper-pagination {
+    display: none;
 }
 
 .growth .section__title {
@@ -753,8 +765,6 @@ body {
     margin-top: 15px;
 }
 
-/* .growth__list-item {
-} */
 
 .growth__list-item-button {
     border-radius: 19px;
@@ -773,7 +783,7 @@ body {
 .growth__cards-block {
     display: flex;
     justify-content: center;
-    margin: 65px auto;
+    padding: 65px 0;
     gap: 30px;
 }
 
@@ -786,9 +796,14 @@ body {
 }
 
 .growth__card-image {
+    width: 100%;
+    height: 100%;
     border-radius: 25px 25px 0 0;
     border: 1px solid #fff;
     background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .growth__block-title-subtitle {
@@ -844,6 +859,7 @@ body {
     max-width: 252px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     border-radius: 25px 25px 13px 13px;
 }
@@ -1374,7 +1390,7 @@ body {
 
 .reviews {
     background-color: #000;
-    padding: 70px 0 0 50px;
+    padding: 70px 50px;
     min-height: 678px;
     position: relative;
     z-index: 1;
@@ -1665,6 +1681,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.feed-back-quest-answ {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
 }
 
 .feed-back__questions-block {
@@ -1726,6 +1749,10 @@ body {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 28px;
+}
+
+.feed-back__connection-block-button {
+    display: flex;
 }
 
 .feed-back__connection-button {
@@ -1828,16 +1855,19 @@ body {
 
 .footer__contacts-list-item:last-child {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__contacts-list-item-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer__contacts-list-item-socials-button {
-    background-image: url('../images/footer-pnone-image.svg');
+    background-color: transparent;
 }
-
-.footer__contacts-list-item-socials:last-child button {
-    background-image: url('../images/footer-telegram-image.svg');
-}
-
 
 @media screen and (max-width: 1335px) {
 
@@ -1846,9 +1876,62 @@ body {
         padding: 0 20px;
     }
 
+    header .container {
+        padding: 0;
+    }
+
     /* ----- Заголовки секций -------- */
     .section__title {
         font-size: 24px;
+    }
+
+    /* ---------- Шапка сайта ---------- */
+    .header__navigation-list-block {
+        background-color: transparent;
+        justify-content: end;
+        gap: 35px;
+    }
+
+    .header__navigation-list {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .burger__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        align-items: flex-end;
+    }
+    
+    .burger__lines {
+        background-color: #000;
+        display: block;
+        width: 44px;
+        height: 7px;
+        border-radius: 21px;
+    }
+    
+    .burger__lines:last-child {
+        width: 32px;
+    }
+
+    .burger.active {
+        background-color: #00A1DC;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .burger__lines.active {
+        background-color: #fff;
     }
 
     /* ---------- Блок Интро -------- */
@@ -1871,10 +1954,33 @@ body {
         border: none;
     }
 
+    .intro__block-years {
+        max-width: 324px;
+    }
+
+    .intro__block-years-development {
+        max-width: 284px;
+        min-height: 219px;
+    }
+
+    .intro__block-years-development-digits {
+        font-size: 64px;
+    }
+    .intro__block-years-development-text {
+        font-size: 24px;
+    }
+
+    .intro__block-years-list-block {
+        margin-top: 40px;
+
+    }
+    /* ----- Блок Конверсия ------ */
     .conversion .container {
         padding: 73px 20px 0;
     }
 
+
+    /* --------- Блок преимущества ------- */
     .advantages__button {
         right: auto;
     }
@@ -1942,6 +2048,33 @@ body {
         padding-top: 20px;
     }
 
+
+    /* ------- Блок с опросом -------- */
+    /* .feed-back-quest-answ {
+
+    } */
+    .feed-back__connection {
+        max-width: 746px;
+        width: 100%;
+    }
+
+    .feed-back__main-block {
+        flex-direction: column;
+    }
+
+    .feed-back__connection-block-button {
+        justify-content: space-between;
+    }
+
+    .feed-back__connection-button {
+        margin: 0;
+        max-width: 354px;
+        width: 100%;
+    }
+
+
+    /* ------ Блок решения роста ------ */
+    
     /* ---------- Подвал -------- */
 
   
