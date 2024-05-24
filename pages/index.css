@@ -488,6 +488,7 @@ h6 {
     background-color: #F9F9F9;
     min-height: 124px;
     display: flex;
+    overflow: hidden;
     align-items: center;
 }
 
