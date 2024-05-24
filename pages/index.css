@@ -1,7 +1,8 @@
 /* @import url('../vendor/normalize.css'); НОРМАЛАЙЗ */
 @import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
 @import url('../vendor/bicubik.css');
-@import url('../vendor/montserrat.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 *{
     /* outline: 1px solid green; */
@@ -32,6 +33,14 @@ body {
     position: relative;
     margin: 0 auto;
 }
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
 
 /* ------ Шапка сайта ------- */
 .header {
@@ -337,11 +346,17 @@ h6 {
     height: 34px;
 }
 
-.feed-back__answer .client__button  {
+.client__block-buttons:hover > .client__button 
+.client__block-buttons:hover > .client__button-add {
+    border: 1px solid red;
+}
+
+.feed-back__answer .client__button {
     background-color: #fff;
 }
 
 .client__button {
+    background-color: #F0F0F0;
     border: none;
     max-width: 153px;
     width: 100%;
@@ -351,9 +366,6 @@ h6 {
     padding: 0;
     color: #4A4A4A;
     cursor: pointer;
-    max-width: 34px;
-    width: 100%;
-    height: 100%;
 }
 
 .client__button-add {
@@ -361,7 +373,6 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F0F0F0;
     border-radius: 50%;
     max-width: 34px;
     width: 100%;
@@ -373,11 +384,6 @@ h6 {
     width: 100%;
     height: 20px;
     object-fit: contain;
-}
-
-.client__button-add:hover {
-    /* background-image: url('../images/intro-button-add-white.svg'); */
-    background-color: #000;
 }
 
 .intro__success-block-digits_text {
@@ -478,18 +484,34 @@ h6 {
 
 /* -------- Слайдер с Логотипами компаний ------- */
 
-.logo-slider__block {
-    height: 124px;
+.logo-slider {
     background-color: #F9F9F9;
+    min-height: 124px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-slider__block {
+    height: 100%;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
+    animation: animation 1s infinite linear;
 }
 
 .logo-slider__image {
     padding-left: 95px;
+}
+
+@keyframes animation {
+0% {
+    transform: translateX(0);
+}
+
+100% {
+    transform: translateX(-110%);
+}
 }
 
 /* ---------Заголовки секций--------- */
@@ -670,6 +692,7 @@ h6 {
     list-style: auto;
     padding-bottom: 20px;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .offers__form_name {
@@ -693,7 +716,7 @@ h6 {
     border-right: 1px solid #FF3535;
     display: flex;
     align-items: center;
-    max-width: 109px;
+    max-width: 129px;
     width: 100%;
     padding: 9px 20px;
 }
@@ -738,31 +761,23 @@ h6 {
 }
 
 .offers__form_file-item img {
-    width: 20px;
-    height: 24px;
+    width: 30px;
+    height: 35px;
 }
 
 .offers__form_file-item label {
     font-size: 16px;
     color: #6C6C6C;
-    margin-left: 8px;
+    margin: 0;
+    display: flex;
+    gap: 9px;
     text-align: left;
 }
 
 .offers__form_file-item input {
     opacity: 0;
-}
-
-.offers__form_file {
-    border: none;
-    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .offers__post-scr {
@@ -822,6 +837,23 @@ h6 {
     position: relative;
     z-index: 0;
     overflow: hidden;
+}
+
+.growth__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    max-width: 137px;
+    width: 100%;
+}
+
+.growth__link p {
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .growth__background-image-left {
@@ -947,7 +979,7 @@ h6 {
 
 .growth__card-image {
     width: 100%;
-    height: 100%;
+    max-height: 159px;
     border-radius: 25px 25px 0 0;
     border: 1px solid #fff;
     background-color: #000;
@@ -994,7 +1026,7 @@ h6 {
 /* ---------- Блок Тарифы ------- */
 
 .growth__buttons-block {
-    margin: 100px 0 150px;
+    margin: 0 0 141px 0;
 }
 
 .growth__tariffs-block {
@@ -1097,9 +1129,10 @@ h6 {
     color: #000;
     margin: 0 0 14px 20px;
     font-size: 10px;
+    border-bottom: 1px solid #000;
+    max-width: 119px;
+    width: 100%;
 }
-
-
 
 /* ------- Блок Результаты -------- */
 .results .container {
@@ -1118,6 +1151,7 @@ h6 {
 
 .results__title {
     color: #000;
+    text-align: right;
 }
 
 .results__button {
@@ -1139,12 +1173,16 @@ h6 {
 .results__button:hover {
     background-color: #000;
     color: #fff;
-    border: none;
+    border: none;   
+}
 
+.results__button:hover path {
+    fill: #fff;
 }
 
 .results__button-text {
     font-size: 20px;
+    flex-shrink: 0;
 }
 
 .results__block {
@@ -1340,7 +1378,7 @@ h6 {
     border-radius: 21px;
     color: #fff;
     font-size: 20px;
-    margin: 20px 0 111px;
+    margin: 0 0 111px;
     padding: 0 16px;
     display: flex;
     flex-direction: row;
@@ -1355,9 +1393,11 @@ h6 {
 
 .conversion__button-check-block {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: 20px;
+    /* gap: 20px; */
+    max-width: 307px;
+    flex-direction: column;
 }
 
 .conversion__button-check {
@@ -1379,6 +1419,7 @@ h6 {
 }
 .conversion__button-check2 {
     max-width: 123px;
+    margin: 0;
 }
 
 .conversion__form {
@@ -1480,8 +1521,21 @@ h6 {
     color: #000;
 }
 
+
 .assurance {
     margin: 57px auto 0;
+    position: relative;
+}
+
+.assurance__buttons-block {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    max-width: 502px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .assurance__block {
@@ -1526,6 +1580,7 @@ h6 {
     object-fit: contain;
     width: 190px;
     height: 161px;
+    margin-right: 16px;
     align-self: flex-end;
 }
 
@@ -1934,9 +1989,8 @@ h6 {
     margin: 0 auto;
     padding-top: 52px;
     width: 100%;
-    height: 433px;
+    min-height: 433px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer__block {
@@ -1976,7 +2030,7 @@ h6 {
 }
 
 .footer__list {
-    margin: 0;
+    margin: 0 0 15px 0;
 }
 
 .footer__list-item {
@@ -1986,6 +2040,7 @@ h6 {
     padding: 0;
     margin: 0 0 20px 0;
     font-size: 16px;
+    line-height: 20px;
 }
 
 
@@ -2021,6 +2076,15 @@ h6 {
 
 .footer__contacts-list-item-socials-button {
     background-color: transparent;
+    max-width: 52px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer__contacts-list-block-main {
+    max-width: 297px;
+    width: 100%;
+    min-height: 336px;
 }
 
 @media screen and (max-width: 1335px) {
@@ -2115,6 +2179,7 @@ h6 {
         flex-direction: column;
         margin-bottom: 20px;
     }
+
     .intro__title-text {
         font-size: 24px;
         line-height: 29.71px;
@@ -2170,7 +2235,6 @@ h6 {
         max-width: 324px;
     }
 
-
     .intro__block-years-development {
         max-width: 284px;
         min-height: 219px;
@@ -2188,11 +2252,26 @@ h6 {
         margin-top: 40px;
         flex-direction: row;
     }
+
+    .intro__block-years-list-block {
+        overflow: hidden;
+    }
     /* ----- Блок Конверсия ------ */
     .conversion .container {
         padding: 73px 20px 0;
     }
+    
+    .conversion__survey-text {
+        margin: 0;
+        font-size: 15px;
+    }
 
+    .conversion__button-check-block {
+        flex-direction: row;
+        margin: 27px 0 0 0;
+        max-width: 391px;
+        gap: 20px;
+    }
 
     /* --------- Блок преимущества ------- */
     .advantages {
@@ -2286,6 +2365,7 @@ h6 {
         width: 100%;
         justify-content: space-between;
         min-height: 81px;
+        margin: 37px 0 0 0;
     }
 
     .conversion__survey-block-button-bonuses {
@@ -2295,6 +2375,7 @@ h6 {
 
     .conversion__button-check {
         font-size: 10px;
+        margin: 0;
     }
 
     .conversion__survey-button-block {
@@ -2305,8 +2386,12 @@ h6 {
         margin: 0 auto;
     }
 
-    .conversion__form {
+    .conversion__form-inputs {
         margin: 41px 0 0 0;
+    }
+
+    .conversion__form {
+        margin: 0;
     }
 
     .assurance__block {
@@ -2336,6 +2421,8 @@ h6 {
     .reviews__main-block {
         flex-direction: column;
         align-items: center;
+        max-width: 577px;
+        margin: 0 auto;
     }
 
     /* ------- Блок с опросом -------- */
@@ -2403,6 +2490,14 @@ h6 {
         margin: 0 10px 15px 0;
     }
 
+    .assurance__buttons-block .client__block-buttons {
+        display: none;
+    }
+
+    .assurance__buttons-block {
+        justify-content: flex-end;
+    }
+
     /* ------------ Блок Отзывы -------- */
     
     .reviews__block-item-right:last-child {
@@ -2421,12 +2516,14 @@ h6 {
     .reviews__block-right {
         margin: 53px 0 60px;
         width: 100%;
-        max-width: 577px;
+        align-self: flex-start;
+        max-width: 507px;
     }
     
     .reviews__block {
-        max-width: 577px;
+        max-width: 507px;
         width: 100%;
+        align-self: flex-start;
     }
 
     .reviews__play-image {
