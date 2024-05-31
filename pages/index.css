@@ -274,6 +274,7 @@ h6 {
     padding: 82px 0 98px;
     text-transform: uppercase;
     border-right: 1px solid #C9C9C9;
+    overflow: hidden;
 }
 
 .intro__title {
@@ -332,6 +333,19 @@ h6 {
     cursor: pointer;
 }
 
+.client__button {
+    background-color: #F0F0F0;
+    border: none;
+    max-width: 153px;
+    width: 100%;
+    height: 34px;
+    border-radius: 22px;
+    font-size: 12px;
+    padding: 0;
+    color: #4A4A4A;
+    cursor: pointer;
+}
+
 .client__button:hover {
     background-color: #000;
     color: #fff;
@@ -346,26 +360,8 @@ h6 {
     height: 34px;
 }
 
-.client__block-buttons:hover > .client__button 
-.client__block-buttons:hover > .client__button-add {
-    border: 1px solid red;
-}
-
 .feed-back__answer .client__button {
     background-color: #fff;
-}
-
-.client__button {
-    background-color: #F0F0F0;
-    border: none;
-    max-width: 153px;
-    width: 100%;
-    height: 34px;
-    border-radius: 22px;
-    font-size: 12px;
-    padding: 0;
-    color: #4A4A4A;
-    cursor: pointer;
 }
 
 .client__button-add {
@@ -377,6 +373,7 @@ h6 {
     max-width: 34px;
     width: 100%;
     height: 34px;
+    background-color: #fff;
 }
 
 .client__button-add img {
@@ -498,7 +495,7 @@ h6 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: animation 1s infinite linear;
+    animation: animation 1s 0s infinite linear;
 }
 
 .logo-slider__image {
@@ -513,6 +510,7 @@ h6 {
 100% {
     transform: translateX(-110%);
 }
+
 }
 
 /* ---------Заголовки секций--------- */
@@ -955,13 +953,13 @@ h6 {
     transition: .3s all ease-out;
 }
 
-.growth__cards-block-main {
+/* .growth__cards-block-main {
 
-}
+} */
 
 .growth__cards-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 65px 0;
     gap: 30px;
     max-width: 978px;
@@ -1032,15 +1030,16 @@ h6 {
 
 .growth__tariffs-block {
     display: flex;
-    padding: 55px 0 100px;
     justify-content: center;
     gap: 51px;
-    min-height: 381px;
+    height: 381px;
+    width: 1162px;
+    margin: 55px auto 0;
 }
 
 .tariffs__card {
-    max-width: 252px;
-    width: 100%;
+    width: 252px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1570,6 +1569,7 @@ h6 {
     font-size: 20px;
     padding: 0;
     margin: 0;
+    font-weight: 700;
 }
 
 .assurance__card-description {
@@ -1579,9 +1579,10 @@ h6 {
 
 .assurance__image {
     object-fit: contain;
-    width: 190px;
-    height: 161px;
-    margin-right: 16px;
+    max-width: 190px;
+    width: 100%;
+    min-height: 161px;
+    margin: 0 16px 16px 0;
     align-self: flex-end;
 }
 
@@ -1607,7 +1608,7 @@ h6 {
 .reviews__background-image-left {
     position: absolute;
     top: -219px;
-    left: -351px;
+    left: -383px;
     z-index: -2234;
 }
 
@@ -1738,6 +1739,7 @@ h6 {
     padding: 21px 30px 0 30px;
     height: 100%;
     position: relative;
+    backdrop-filter: blur(20px);
 }
 
 .reviews__block-background-block::before {
@@ -1748,7 +1750,7 @@ h6 {
     width: 100%;
     height: 100%;
     background-color: #8D8D8D;
-    opacity: .6;
+    opacity: .4;
     z-index: -1;
 }
 
@@ -1930,6 +1932,7 @@ h6 {
     display: flex;
     flex-direction: row;
     gap: 75px;
+    align-items: flex-end;
 }
 
 .feed-back__questions-block {
@@ -1948,10 +1951,20 @@ h6 {
     min-height: 53px;
     border-radius: 28px;
     border: 1px solid #6C6C6C;
-    color: #6C6C6C;;
+    color: #6C6C6C;
+    background-color: transparent;
     text-align: left;
     padding: 16px 22px;
     margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.feed-back__question-item:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 7px 22px;
 }
 
 .feed-back__answer-block {
@@ -2017,6 +2030,7 @@ h6 {
 .feed-back__connection-button:last-child {
     margin-bottom: 0;
 }
+
 /* --------- Подвал ------------- */
 .footer {
     position: relative;
@@ -2333,6 +2347,10 @@ h6 {
         max-width: 714px;
         min-height: 514px;
     }
+    
+    .growth__link {
+        display: none;
+    }
 
     /* -------- Блок Offers ------ */
     
@@ -2467,17 +2485,25 @@ h6 {
         gap: 70px;
     }
 
-    .feed-back__questions-block {
-        max-width: 233px;
-    }
-
     .feed-back__questions-text {
         font-size: 16px;
+        margin-bottom: 37px;
+    }
+
+    .feed-back__question-item {
+        font-size: 13px;
+    }
+
+    .feed-back__question-item svg {
+        max-width: 27px;
+        width: 100%;
+        max-height: 27px;
     }
 
     .feed-back__answer-block {
         padding: 15px 0 0 20px;
         max-width: 347px;
+        margin-top: 37px;
         min-height: 320px;
         display: flex;
         flex-direction: column;
@@ -2495,7 +2521,7 @@ h6 {
     }
 
     .feed-back__connection {
-        max-width: 746px;
+        max-width: 1335px;
         width: 100%;
         align-self: center;
     }
@@ -2512,11 +2538,11 @@ h6 {
     .feed-back__connection-block-button {
         justify-content: space-between;
         flex-direction: row;
+        gap: 38px;
     }
 
     .feed-back__connection-button {
         margin: 0;
-        max-width: 354px;
         width: 100%;
     }
 
@@ -2765,5 +2791,4 @@ h6 {
     .advantages__list-block {
         max-width: 327px;
     }
-
 }
