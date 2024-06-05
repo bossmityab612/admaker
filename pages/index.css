@@ -5,7 +5,7 @@
 
 
 *{
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     box-sizing: border-box;
 }
 
@@ -2688,9 +2688,7 @@ h6 {
 
 @media screen and (max-width: 784px) {
     /* -------- Шапка ------- */
-    .header .button-call {
-        display: none;
-    }
+    
 
     .section__title {
         font-size: 20px;
@@ -2704,6 +2702,30 @@ h6 {
     }
 
     /* ----- Блок Интро ----- */
+    .intro__block-projects-inner {
+        padding: 70px 0 0 0;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .intro__title {
+        line-height: 39.62px;
+        font-size: 32px;
+    }
+
+    .intro__title-text {
+        line-height: 17.33px;
+        font-size: 14px;
+    }
+
+    .header .button-call {
+        display: none;
+    }
+
+    .intro__table-block {
+        flex-direction: column;
+    }
+
     .intro .container {
         align-items: center;
         flex-direction: column;
