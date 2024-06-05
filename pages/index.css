@@ -2761,6 +2761,8 @@ h6 {
     .offers__text-block .section__title {
         font-size: 20px;
         margin: 0;
+        max-width: 363px;
+        line-height: 20.79px;
     }
 
     .offers__text-block {
@@ -2774,6 +2776,10 @@ h6 {
         max-width: 317px;
         width: 100%;
         min-height: 132px;
+    }
+
+    .offers__list-item {
+        font-weight: 500;
     }
 
     .offers__post-scr {
@@ -2835,10 +2841,127 @@ h6 {
         font-size: 11px;
     }
 
-    /* --------- Блок Решения Роста --------  */
-    .growth__list {
-        
+
+    /* ------ Блок со слайдером ----- */
+    .logo-slider {
+        min-height: 47px;
     }
+
+    .logo-slider__image {
+        max-height: 32px;
+    }
+
+    /* --------- Блок Решения Роста --------  */
+    .growth {
+        padding: 50px 0 0 0;
+    }
+
+    .growth .section__title {
+        line-height: 20.79px;
+    }
+
+    /* --- Блок Результаты наших клиентов --- */
+    .results__title-block .client__block-buttons {
+        display: none;
+    }
+    
+    .results__button {
+        display: none;
+    }
+
+    .section__title {
+        line-height: 20.79px;
+        max-width: 344px;
+        width: 100%;
+    }
+
+    .results__title-block {
+        margin: 50px auto 0;
+        justify-content: flex-end;
+    }
+
+    .results__block {
+        min-height: 310px;
+    }
+
+    .results__logo-image {
+        width: 20px;
+        height: 20px;
+    }
+    .results__company-name-block {
+        align-items: center;
+        flex-direction: row-reverse;
+        margin: 32px 0 0 10px;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .results__title-name {
+        display: block;
+        text-align: start;
+        font-size: 10px;
+    }
+
+    .results__block-name-tags {
+        flex-direction: column;
+        min-height: 138px;
+        padding: 19px 23px 0 17px;
+        align-items: flex-end;
+    }
+    
+    .results__cases-list {
+        justify-content: flex-end;
+        max-width: 61px;
+    }
+    
+    .results__cases-list-item {
+        font-size: 8px;
+        height: 19px;
+    }
+
+    .results__stats {
+        margin: 43px 0 0 10px;
+    }
+
+    .results__stats-text-percents {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .results__stats-text {
+        align-items: flex-start;
+    }
+
+    .results__stats-text-item {
+        text-align: start;
+        font-size: 10px;
+    }
+
+    .results__next-button {
+        width: 37px;
+        height: 37px;
+        object-fit: contain;
+        background-size: contain;
+    }
+    
+    .results__cases-block {
+        max-width: 166px;
+        padding: 0;
+    }
+
+    .results__button-name-cases {
+        font-size: 10px;
+        max-height: 25px; 
+        height: 100%;  
+    }
+
+    .results__button-show {
+        max-width: 85px;
+        height: 25px;
+        font-size: 11px;
+        margin: 0 10px 20px 0;
+    }
+
     .advantages {
         min-height: 1381px;
     }
