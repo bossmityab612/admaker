@@ -1532,11 +1532,7 @@ h6 {
 }
 
 .assurance__buttons-block {
-    position: absolute;
-    top: 0;
-    right: 20px;
     display: flex;
-    max-width: 502px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -1613,14 +1609,14 @@ h6 {
     position: absolute;
     top: -219px;
     left: -383px;
-    z-index: -2234;
+    z-index: -2;
 }
 
 .reviews__background-image-right {
     position: absolute;
     top: -167px;
     right: -218px;
-    z-index: -23424;
+    z-index: -2;
 }
 
 .reviews__card-item {
@@ -2299,6 +2295,7 @@ h6 {
     .client__button {
         max-width: 153px;
         font-size: 10px;
+        background-color: #fff;
     }
 
     .intro__block-years-inner {
@@ -2460,6 +2457,18 @@ h6 {
 
     .conversion__survey-button-block {
         margin: 0;
+        max-width: 128px;
+        height: 34px;
+        padding: 0 11px;
+    }
+
+    .conversion__survey-button-block p {
+        font-size: 14px;
+    }
+
+    .conversion__survey-button-image {
+        width: 32px;
+        height: 32px;
     }
 
     .conversion__form-block {
@@ -2472,6 +2481,47 @@ h6 {
 
     .conversion__form {
         margin: 0;
+    }
+
+    .conversion__digits-item {
+        align-items: center;
+        font-size: 33px;
+    }
+
+    .conversion__digits-item-from {
+        font-size: 32px;
+    }
+
+    .conversion__digits-text {
+        font-size: 10px;
+    }
+
+    .conversion__form-circules-item {
+        width: 7px;
+        height: 7px;
+    }
+
+    .conversion__input {
+        position: relative;
+    }
+    
+    .conversion__input::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid green;
+        background-color: rgba(39, 39, 39, .41);
+    }
+
+    .conversion__survey-block-button-bonuses {
+        display: none;
+    }
+
+    .conversion__questions {
+        font-size: 10px;
     }
 
     .assurance__block {
@@ -2509,12 +2559,20 @@ h6 {
         margin: 0 auto;
     }
 
+    .reviews__background-image-left {
+        top: 0;
+        left: -486px;
+    }
+
+    .reviews__background-image-right {
+        top: -148px;
+        left: 10px;
+    }
     /* ------- Блок с опросом -------- */
     .feed-back-quest-answ {
         max-width: 650px;
         width: 100%;
         gap: 70px;
-        flex-direction: column;
     }
 
     .feed-back__questions-text {
@@ -2588,7 +2646,9 @@ h6 {
     }
 
     .assurance__buttons-block {
-        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     /* ------------ Блок Отзывы -------- */
@@ -2962,6 +3022,12 @@ h6 {
         margin: 0 10px 20px 0;
     }
 
+    /* -------- Блок Преимущества -------- */
+    .advantages__image-left {
+        bottom: 0;
+        top: auto;
+    }
+
     .advantages {
         min-height: 1381px;
     }
@@ -2979,7 +3045,49 @@ h6 {
         margin: 0 auto;
     }
 
+    .reviews__icon-circle {
+        width: 47px;
+        height: 47px;
+    }
+
+    .reviews__block-service-client {
+        padding: 4px 0;
+    }
+
+    .reviews__block-service-client p {
+        font-size: 10px;
+    }
+
+    .reviews__card-block {
+        flex-direction: column;
+    }
+
+    .reviews__circules-buttons {
+        max-width: 170px;
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    .reviews__circules-buttons-item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reviews__circules-buttons-item-image {
+        width: 20px;
+        height: 20px;
+    }
+
+    .reviews__button-google {
+        height: 31px;
+    }
+
     /* ----- Блок с собратной связью ---- */
+    .feed-back-quest-answ {
+        flex-direction: column;
+    }
+    
     .feed-back__connection-block-button {
         gap: 26px;
     }
