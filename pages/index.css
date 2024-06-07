@@ -299,6 +299,7 @@ h6 {
     height: 184px;
     background-image: url('../images/image-block-success.png');
     background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     margin: 47px 0 0 0;
     display: flex;
@@ -431,6 +432,14 @@ h6 {
     gap: 16px;
 }
 
+.intro__block-years-list-block-carousel {
+    display: none;
+}
+
+.intro__block-years-list-block-inner {
+    display: none;
+}
+
 .intro__block-years-development-text {
     font-size: 40px;
     width: 100%;
@@ -470,6 +479,15 @@ h6 {
     font-weight: 500;
 }
 
+
+.intro__success-block-slider {
+    display: none;
+}
+
+.intro__block-years-development-slider {
+    display: none;
+}
+
 .intro__block-years-list-item-line {
     height: 27px;
     width: 2px;
@@ -481,6 +499,14 @@ h6 {
 
 .intro__block-years-list-item-image {
     margin: 0;
+}
+
+.swiper-button-prev {
+    display: none;
+}
+
+.swiper-button-next {
+    display: none;
 }
 
 /* -------- Слайдер с Логотипами компаний ------- */
@@ -2329,6 +2355,12 @@ h6 {
         overflow: hidden;
     }
 
+    
+    .intro__block-years-list-block-inner {
+        display: block;
+        max-height: 55px;
+    }
+
     /* ----- Блок Конверсия ------ */
     .conversion .container {
         padding: 73px 20px 0;
@@ -2762,12 +2794,18 @@ h6 {
     }
 
     /* ----- Блок Интро ----- */
+    .intro {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
     .intro__block-projects-inner {
         padding: 70px 0 0 0;
         justify-content: flex-start;
         width: 100%;
+        min-height: 219px;
     }
-    
+
     .intro__title {
         line-height: 39.62px;
         font-size: 32px;
@@ -2786,11 +2824,14 @@ h6 {
         flex-direction: column;
     }
 
-    .intro .container {
-        align-items: center;
-        flex-direction: column;
+    .intro__table-block .button-call {
+        margin: 25px 0 39px;
+        padding: 0;
     }
 
+    .intro__block-years-list-item {
+        font-size: 14px;
+    }
     .intro__title {
         font-size: 32px;
     }
@@ -2799,12 +2840,59 @@ h6 {
         font-size: 14px;
     }
 
+    .intro__table-block-inner {
+        padding: 0;
+        margin: 0;
+    }
+
     .intro__success-block {
         display: none;
     }
 
     .intro__block-years-development {
         display: none;
+    }
+
+    .intro__block-years-list-block {
+        gap: 94px;
+        margin: 40px 0 35px;
+    }
+
+    .intro__block-slider {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .intro__success-block-slider {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        min-height: 219px;
+    }
+
+    .intro__block-years-development-slider {
+        display: flex;
+    }
+
+    .intro__block-slider .swiper-wrapper {
+        gap: 18px;
+    }
+
+    .swiper-button-prev {
+        display: flex;
+    }
+    
+    .swiper-button-next {
+        display: flex;
+    }
+    
+    .growth__cards-block {
+        justify-content: center;
+    }
+
+    .intro__block-years-list-block-carousel {
+        display: block;
     }
 
     /* ------ Блок Предложения ------ */
@@ -3022,6 +3110,11 @@ h6 {
         margin: 0 10px 20px 0;
     }
 
+    /* ---------- Блок Конверисия ----- */
+    .conversion__input {
+        font-size: 14px;
+    }
+
     /* -------- Блок Преимущества -------- */
     .advantages__image-left {
         bottom: 0;
@@ -3056,6 +3149,28 @@ h6 {
 
     .reviews__block-service-client p {
         font-size: 10px;
+    }
+    
+    .reviews__block-left {
+        max-height: 100%;
+    }
+
+    .reviews__buttons-card {
+        margin: 25px auto 0;
+    }
+
+    .reviews__text {
+        font-size: 14px;
+    }
+
+    .reviews__text-descr {
+        font-size: 11px;
+    }
+
+    .reviews__play-image {
+        width: 51px;
+        height: 51px;
+        left: 208px;
     }
 
     .reviews__card-block {
@@ -3094,6 +3209,7 @@ h6 {
 
     .feed-back__connection-button {
         padding: 0 10px;
+        min-height: 36px;
     }
     
     .feed-back__connection-button img {
