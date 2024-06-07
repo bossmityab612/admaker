@@ -51,6 +51,8 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    max-width: 1341px;
+    width: 100%;
 }
 
 .header__block-logo-nav {
@@ -3317,7 +3319,7 @@ h6 {
     display: none;
 }
 
-.active {
+.popup_opened {
     position: fixed;
     top: 0;
     left: 0;
@@ -3410,4 +3412,50 @@ h6 {
 .popup__button-send a {
     color: #6C6C6C;
     text-decoration: underline;
+}
+
+/* ---- Старица с успешной отправкой формы ---- */
+.go-back-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 264px;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.go-back-link p {
+    /* border: 1px solid #000; */
+    text-decoration: underline;
+}
+
+.form-success-block {
+    font-family: var(--bicubik);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    max-width: 872px;
+    width: 100%;
+    min-height: 734px;
+    margin: 80px auto 223px;
+}
+
+.form-success-block h2 {
+    font-size: 64px;
+}
+
+.form-success-block h3 {
+    font-size: 32px;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.form-success-block-links {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
