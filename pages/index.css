@@ -24,6 +24,7 @@ body {
     width: 100%;
     margin: 0 auto;
     font-family: var(--montserrat);
+    position: relative;
 }   
 
 .container {
@@ -430,6 +431,7 @@ h6 {
     flex-direction: column;
     margin-top: 51px;
     gap: 16px;
+    z-index: 0;
 }
 
 .intro__block-years-list-block-carousel {
@@ -477,6 +479,10 @@ h6 {
 .intro__block-years-list-item {
     font-size: 16px;
     font-weight: 500;
+}
+
+.intro__block-years-list-item-image img {
+    z-index: -2;
 }
 
 
@@ -564,7 +570,7 @@ h6 {
     width: 100%;
     height: 922px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
 } 
 
@@ -2893,6 +2899,7 @@ h6 {
 
     .intro__block-years-list-block-carousel {
         display: block;
+        max-height: 55px;
     }
 
     /* ------ Блок Предложения ------ */
@@ -3302,4 +3309,105 @@ h6 {
         max-width: 78px;
         min-height: 179px;
     }
+}
+
+
+/* ------- ПОПАП окно ---------- */
+.popup {
+    display: none;
+}
+
+.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.popup__block {
+    max-width: 608px;
+    width: 100%;
+    height: 552px;
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative;
+    padding: 0 45px 25px;
+}
+
+.popup__button-close {
+
+}
+
+.popup__button-close {
+    background-image: url('../images/Close-Square.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 25px;
+    height: 25px;
+
+    background-size: cover;
+}
+
+.popup__header {
+    font-size: 32px;
+    font-family: var(--bicubik);
+    text-align: center;
+    margin: 65px auto 35px;
+}
+
+.popup__text {
+    color: #6C6C6C;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.popup__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.popup__form-input {
+    background-color: #EFEFEF;
+    border-radius: 15px;
+    max-width: 249px;
+    width: 100%;
+    height: 38px;
+    padding: 20px;
+}
+
+.popup__button-send {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 60px 0 0 0;
+}
+
+.popup__buttons-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 208px;
+    width: 100%;
+    min-height: 208px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.popup__buttons-block .button-call {
+    transition: none;
+    justify-content: center;
+}
+
+.popup__button-send a {
+    color: #6C6C6C;
+    text-decoration: underline;
 }
